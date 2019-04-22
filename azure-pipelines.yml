@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Windows Server 2016 '
+  vmImage: 'Windows Server 2016 Datacenter'
 
 steps:
 - script: echo Hello, world!
