@@ -1,4 +1,13 @@
 # Starter pipeline
+- task: AzureResourceGroupDeployment@2
+  inputs:
+    ConnectedServiceName: 'Azure-infra-service-connection'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'Temasek-Devops-Rg'
+    location: 'Southeast Asia'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/vikranthsuravarapu/Azure-Storage-/blob/master/Storage.Accounttemplate.json'
+    csmParametersFileLink: 'https://github.com/vikranthsuravarapu/Azure-Storage-/blob/master/Storage.Account.Parameters.json'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
